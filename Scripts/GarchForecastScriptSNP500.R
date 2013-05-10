@@ -1,3 +1,5 @@
+require("elliptic");
+require("hypergeo");
 SPLIT_FIT_TEST_SET<-0.6;
 
 plot(date,logRet,type='l');
@@ -42,8 +44,8 @@ plotForecastedData(modelSTDFunctionCTS,filePrefix="CTS",
 
 #MTS Garch
 initParams=c(1.5,1,1,1,1);
-garchParams <- c(1.461706,1.068618,0.981182,1.067278,1.03691,
-                 1.085742,1.499774e-05,0.1173998,0.8591058)
+garchParams <- c(1.147742,-0.8670031,1.07572,0.5348109,0.473992,
+                 2.832777e-06,0.1272681,0.8597438)
 
 
 plotForecastedData(modelSTDFunctionMTS,filePrefix="MTS",

@@ -1,17 +1,13 @@
-defaultDirectory<-"D:\\Data\\McDonalds";
+defaultDirectory<-"D:\\Data\\Garch Source\\SNP500";
 setwd (defaultDirectory);
 logRet<-c();
 date<-c();
 
-function<-loadData()
-{
-  data<-loadPricesFromFile("prices.csv");
-  date<-as.Date(data[1][[1]],"%d-%m-%Y");
-  date<-date[2:length(date)];
-  logRet<-transformPrices(data[2][[1]]);
-}
+data<-loadPricesFromFile("prices.csv");
+date<-as.Date(data[1][[1]],"%d-%m-%Y");
+date<-date[2:length(date)];
+logRet<-transformPrices(data[2][[1]]);
 
-loadData();
 
 
 
