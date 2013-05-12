@@ -42,7 +42,7 @@ plotForecastedData(modelSTDFunctionCTS,filePrefix="CTS",
 
 #MTS Garch
 initParams=c(1.5,1,1,1,1);
-garchParams <- c(0.5977937,1.360131,1.108706,0.9535164,0.9114298
+garchParams <- c(0.5977937,1.360131,1.108706,0.9535164,0.9114298,
                  5.841102e-06,0.1199947,0.8602524);
 
 
