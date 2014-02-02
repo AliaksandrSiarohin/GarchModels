@@ -3,12 +3,10 @@ setwd (defaultDirectory);
 logRet<-c();
 date<-c();
 
-data<-loadPricesFromFile("prices.csv");
+data<-loadPricesFromFile("\\prices.csv");
 date<-as.Date(data[1][[1]],"%d-%m-%Y");
 date<-date[2:length(date)];
 logRet<-transformPrices(data[2][[1]]);
-
-
 
 
 createWorkingSubDirecory<-function(dirName)

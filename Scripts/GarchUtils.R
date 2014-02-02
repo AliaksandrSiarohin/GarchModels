@@ -160,7 +160,18 @@ stdNormal<-function(x,params)
   density<-linearDensityTransform(function(x){ dnorm(x,params[1],abs(params[2])) },-mean/sd,1/sd);
   return (density(x));
 }
-  
+
+variation <- function(alpha0, alpha1, beta1) {
+  alpha0/(1-alpha1-beta1);
+}
+
+kurtosis <-function(alpha0, alpha1, beta1, kur_e) {
+  kur_e*(alpha0^2+alpha0^2(alpha1+beta1))/((1-alpha1-beta1)*(1-beta1^2-alpah1^2*kur_e-2beta1*alpha1))  
+}
+
+kur_e <- function(params, var, kur) {
+  kur(params)/ (var(params)^2);
+}
   
   
   
